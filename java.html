@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade JavaScript</title>
+  <style>
+    .minhaClasse {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <!-- escreve a menssagem capturada pelo getelementbyid -->
+  <h3 id="mensagem"></h3>
+
+  <!-- escreve somareultado capturado pelo getelementebuid -->
+  <p id="somaResultado"></p>
+
+  <!-- (3) Elemento para alterar por ID -->
+  <p id="porId">Texto original por ID</p>
+
+  <!-- (4) Elemento para alterar por Name -->
+  <p name="porName">Texto original por Name</p>
+
+  <!-- (5) Elemento para alterar por Class -->
+  <p class="minhaClasse">Texto original por Classe</p>
+
+  <script>
+    //  Mensagem de hello world
+    document.getElementById("mensagem").innerText = "Hello World";
+
+    //  Soma numeros inteiros
+    let num1 = 10;
+    let num2 = 10;
+    let soma = num1 + num2;
+    document.getElementById("somaResultado").innerText = "A soma de " + num1 + " + " + num2 + " = " + soma;
+
+    //Altera propriedade de um elemento por ID
+    document.getElementById("porId").style.color = "green";
+
+    //Altera propriedade de um elemento por NAME
+    document.getElementsByName("porName")[0].style.fontWeight = "bold";
+
+    //Altera propriedade de um elemento por CLASS
+    document.getElementsByClassName("minhaClasse")[0].style.fontSize = "50px";
+  </script>
+</body>
+</html>
